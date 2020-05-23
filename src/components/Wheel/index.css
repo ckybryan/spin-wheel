@@ -12,6 +12,7 @@
   --nb-turn: 5;
   --spinning-duration: 4s;
   --reset-duration: 0.25s;
+  --nb-item: 1;
 }
 
 .wheel-container {
@@ -52,7 +53,6 @@
   border-right-color: var(--neutral-color);
 }
 
-/* Roue */
 .wheel {
   display: block;
   position: relative;
@@ -74,7 +74,7 @@
   transform: rotate(
     calc(
       var(--nb-turn) * 360deg +
-        (-360deg * var(--selected-item) / var(--nb-item, 1))
+        (-360deg * var(--selected-item, 1) / var(--nb-item, 1))
     )
   );
 }
